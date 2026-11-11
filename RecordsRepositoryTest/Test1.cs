@@ -22,7 +22,19 @@ namespace RecordsRepositoryTest
             var records = _repo.GetAllRecords();
 
             // Assert
+            Assert.AreEqual(4, records.Count);
+        }
+
+        [TestMethod]
+        public void GetAllRecords_FilterByTitle()
+        {
+            // Arrange
+            string titleFilter = "A";
+            // Act
+            var records = _repo.GetAllRecords(title: titleFilter);
+            // Assert
             Assert.AreEqual(3, records.Count);
         }
+        }
     }
-}
+
