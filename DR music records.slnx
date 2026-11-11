@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DR music records/DR music records.csproj" />
+  <Project Path="RecordsRepositoryTest/RecordsRepositoryTest.csproj" />
+</Solution>
