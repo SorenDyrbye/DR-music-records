@@ -60,6 +60,16 @@ namespace RecordsRepositoryTest
             // Assert
             Assert.AreEqual(4, records.Count);
         }
+
+        [TestMethod]
+        public void TestLogin()
+        {
+            //arrange
+
+            //act
+
+            //assert
+        }
     }
 }
 
