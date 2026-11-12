@@ -17,7 +17,7 @@ namespace DR_music_records
             _data.Add(new Records("Kiss", "Batman", 200, 2022));
         }
 
-        public List<Records> GetAllRecords(string title = null, string artist = null)
+        public List<Records> GetAllRecords(string? title = null, string? artist = null)
         {
             List<Records> records = new(_data);
             if (title != null)
@@ -28,23 +28,22 @@ namespace DR_music_records
             {
                 records = records.FindAll(record => record.Artist.StartsWith(artist));
             }
-            //if (sortBy != null)
+            //if (sortby != null)
             //{
-            //    switch (sortBy)
+            //    switch (sortby)
             //    {
             //        case "title":
-            //            records = records.OrderBy(r => r.Title).ToList();
+            //            records = records.orderby(r => r.title).tolist();
             //            break;
             //        case "artist":
-            //            records = records.OrderBy(r => r.Artist).ToList();
+            //            records = records.orderby(r => r.artist).tolist();
             //            break;
             //        case "year":
-            //            records = records.OrderBy(r => r.PublicationYear).ToList();
+            //            records = records.orderby(r => r.publicationyear).tolist();
             //            break;
             //    }
-            return records;
+                return records;
         }
-            
 
         }
      }

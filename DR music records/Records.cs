@@ -3,8 +3,8 @@
     public class Records
     {
         public int id { get; set; }
-        public string Title { get; set; }
-        public string Artist { get; set; }
+        public string? Title { get; set; }
+        public string? Artist { get; set; }
         public int Duration { get; set; } // in seconds
         public int PublicationYear { get; set; }
 
