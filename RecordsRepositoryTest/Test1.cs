@@ -25,6 +25,8 @@ namespace RecordsRepositoryTest
             Assert.AreEqual(4, records.Count);
         }
 
+
+
         [TestMethod]
         public void GetAllRecords_FilterByTitle()
         {
@@ -35,6 +37,29 @@ namespace RecordsRepositoryTest
             // Assert
             Assert.AreEqual(3, records.Count);
         }
+
+        [TestMethod]
+        public void GetAllRecords_FilterByArtist()
+        {
+            // Arrange
+            string artistFilter = "Artist";
+            // Act
+            var records = _repo.GetAllRecords(artist: artistFilter);
+            // Assert
+            Assert.AreEqual(3, records.Count);
+        }
+
+
+        [TestMethod]
+        public void GetAllRecords_FilterByArtistNull()
+        {
+            // Arrange
+            string artistFilter = null;
+            // Act
+            var records = _repo.GetAllRecords(artist: artistFilter);
+            // Assert
+            Assert.AreEqual(4, records.Count);
         }
     }
+}
 
