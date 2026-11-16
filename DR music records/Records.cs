@@ -2,7 +2,7 @@
 {
     public class Records
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string? Title { get; set; }
         public string? Artist { get; set; }
         public int Duration { get; set; } // in seconds
@@ -15,5 +15,6 @@
             Duration = duration;
             PublicationYear = publicationYear;
         }
+        
     }
 }
